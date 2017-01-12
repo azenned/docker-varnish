@@ -1,6 +1,6 @@
 # Varnish Docker container
 
-> Centos 7  
+> Centos 6.8 
 > Varnish 4.x
 
 ## Usage
@@ -12,7 +12,7 @@ docker run -d \
   --link web-app:backend-host \
   --volumes-from web-app \
   --env 'VCL_CONFIG=/data/path/to/varnish.vcl' \
-  million12/varnish
+  azenned/varnish
 ```
 
 In the above example we assume that:
