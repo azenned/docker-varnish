@@ -1,8 +1,9 @@
-FROM centos:centos7
-MAINTAINER Przemyslaw Ozgo linux@ozgo.info, Marcin Ryzycki marcin@m12.io
+FROM centos:centos6.8
+MAINTAINER Przemyslaw Ozgo linux@ozgo.info, Marcin Ryzycki marcin@m12.io, ZENNED ABDERRAZAK azenned+github@gmail.com
 
 RUN yum update -y && \
   yum install -y epel-release && \
+  rpm --nosignature -i https://repo.varnish-cache.org/redhat/varnish-4.1.el6.rpm && \
   yum install -y varnish && \
   yum install -y libmhash-devel && \
   yum clean all
